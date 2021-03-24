@@ -29,4 +29,8 @@ class Umpire {
         }
         return false
     }
+    
+    func isDeuce(_ player1Score: Int, _ player2Score: Int) -> Bool {
+        return player1Score >= 3 && player2Score == player1Score
+    }
 }

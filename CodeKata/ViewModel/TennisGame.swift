@@ -27,6 +27,8 @@ class TennisGame {
             return getLeadScorePlayer().name + " won"
         } else if umpire.isAdvantage(player1.score, player2.score) {
             return getLeadScorePlayer().name + " has advantage"
+        } else if umpire.isDeuce(player1.score, player2.score) {
+            return "Game is deuce"
         } else {
             return player1.getPointText() + " " + player2.getPointText()
         }

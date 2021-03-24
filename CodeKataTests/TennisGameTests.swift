@@ -77,7 +77,14 @@ class TennisGameTests: XCTestCase {
     }
     
     func testPointsShouldBeDeuceWhenBothPlayersScoresLeastThreeTimesAndPlayersPointsAreEqual() {
-        
+        player1.serveAndWin()
+        player1.serveAndWin()
+        player1.serveAndWin()
+        player2.serveAndWin()
+        player2.serveAndWin()
+        player2.serveAndWin()
+        let actualScore = subject.getScore()
+        XCTAssertEqual(actualScore, "Game is deuce")
     }
     
     override func tearDown() {
