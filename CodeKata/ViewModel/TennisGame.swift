@@ -30,14 +30,6 @@ class TennisGame {
         }
     }
     
-    private func playerWithHighestScore() -> String {
-        if player1.score > player2.score {
-            return player1.name
-        } else {
-            return player2.name
-        }
-    }
-    
     func getLeadScorePlayer() -> Player {
         return player1.score > player2.score ? player1 : player2
     }
