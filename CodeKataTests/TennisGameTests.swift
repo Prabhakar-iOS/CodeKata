@@ -67,10 +67,13 @@ class TennisGameTests: XCTestCase {
         player1.serveAndWin()
         player1.serveAndWin()
         player1.serveAndWin()
+        player1.serveAndWin()
+        player2.serveAndWin()
+        player2.serveAndWin()
         player2.serveAndWin()
         
         let actualScore = subject.getScore()
-        XCTAssertEqual(actualScore, "")
+        XCTAssertEqual(actualScore, "Player one has advantage")
     }
     
     func testPointsShouldBeDeuceWhenBothPlayersScoresLeastThreeTimesAndPlayersPointsAreEqual() {

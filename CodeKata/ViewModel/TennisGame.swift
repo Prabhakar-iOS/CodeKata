@@ -25,6 +25,8 @@ class TennisGame {
     func getScore() -> String {
         if umpire.hasWinner(player1.score, player2.score) {
             return getLeadScorePlayer().name + " won"
+        } else if umpire.isAdvantage(player1.score, player2.score) {
+            return getLeadScorePlayer().name + " has advantage"
         } else {
             return player1.getPointText() + " " + player2.getPointText()
         }

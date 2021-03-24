@@ -10,12 +10,21 @@ import Foundation
 
 class Umpire {
     
-    
     func hasWinner(_ playerOneScore: Int, _ playerTwoScore: Int) -> Bool {
         if playerTwoScore >= 4 && playerTwoScore >= playerOneScore + 2 {
             return true
         }
         if playerOneScore >= 4 && playerOneScore >= playerTwoScore + 2 {
+            return true
+        }
+        return false
+    }
+    
+    func isAdvantage(_ player1Score: Int, _ player2Score: Int) -> Bool {
+        if player1Score >= 4 && player2Score == player1Score + 1 {
+            return true
+        }
+        if player1Score >= 4 && player1Score == player2Score + 1 {
             return true
         }
         return false
