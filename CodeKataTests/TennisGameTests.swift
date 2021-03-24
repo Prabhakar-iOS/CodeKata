@@ -11,10 +11,14 @@ import XCTest
 
 class TennisGameTests: XCTestCase {
     var subject: TennisGame!
-    var player1 = Player(name: "Player one", score: 0)
-    var player2 = Player(name: "Player two", score: 0)
+    
+    var player1: Player!
+    var player2: Player!
+    
     override func setUp() {
         super.setUp()
+        player1 = Player(name: "Player one", score: 0)
+        player2 = Player(name: "Player two", score: 0)
         subject = TennisGame(player1: player1, player2: player2)
     }
     
@@ -51,5 +55,12 @@ class TennisGameTests: XCTestCase {
     
     func testGameShouldBeWonByPlayer1WhenPlayer1ScoredFourTotalWithTwoPointsMoreThanPlayer2() {
         
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        subject = nil
+        player2 = nil
+        player1 = nil
     }
 }

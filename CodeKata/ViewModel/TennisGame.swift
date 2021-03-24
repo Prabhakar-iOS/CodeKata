@@ -9,9 +9,7 @@
 import Foundation
 
 class TennisGame {
-    var player1Score = 0
-    var player2Score = 0
-    
+
     var player1: Player
     var player2: Player
     
@@ -22,13 +20,10 @@ class TennisGame {
     }
     
     func getScore() -> String {
-        if player1.score == 0 && player2.score == 0 {
-             return "Love Love"
-        } else if player1.score == 1 && player2.score == 0 {
-            return "Fifteen Love"
-        } else if player1.score == 2 && player2.score == 0 {
-            return "Thirty Love"
-        } 
-       return ""
+        if player1.score >= 3 && player2.score >= 3 {
+            return ""
+        } else {
+            return player1.getPointText() + " " + player2.getPointText()
+        }
     }
 }
