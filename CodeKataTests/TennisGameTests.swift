@@ -23,11 +23,14 @@ class TennisGameTests: XCTestCase {
     }
     
     func testPointShouldBeFifteenLoveWhenPlayer1ScoredFirst() {
+        subject.playerOneServedAndScored()
         let actualScore = subject.getScore()
         XCTAssertEqual(actualScore, "Fifteen Love")
     }
     
     func testPointShouldBeThirtyLoveWhenPlayer1ScoredSecondTime() {
+        subject.playerOneServedAndScored()
+        subject.playerOneServedAndScored()
         let actualScore = subject.getScore()
         XCTAssertEqual(actualScore, "Thirty Love")
     }
