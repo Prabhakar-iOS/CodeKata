@@ -11,10 +11,11 @@ import XCTest
 
 class TennisGameTests: XCTestCase {
     var subject: TennisGame!
-    
+    var player1 = Player(name: "Player one", score: 0)
+    var player2 = Player(name: "Player two", score: 0)
     override func setUp() {
         super.setUp()
-        subject = TennisGame()
+        subject = TennisGame(player1: player1, player2: player2)
     }
     
     func testPointsShouldBeLoveLoveWhenStartOfTheGame() {
@@ -23,14 +24,14 @@ class TennisGameTests: XCTestCase {
     }
     
     func testPointShouldBeFifteenLoveWhenPlayer1ScoredFirst() {
-        subject.playerOneServedAndScored()
+        player1.serveAndWin()
         let actualScore = subject.getScore()
         XCTAssertEqual(actualScore, "Fifteen Love")
     }
     
     func testPointShouldBeThirtyLoveWhenPlayer1ScoredSecondTime() {
-        subject.playerOneServedAndScored()
-        subject.playerOneServedAndScored()
+        player1.serveAndWin()
+        player1.serveAndWin()
         let actualScore = subject.getScore()
         XCTAssertEqual(actualScore, "Thirty Love")
     }

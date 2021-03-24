@@ -8,26 +8,27 @@
 
 import Foundation
 
-struct TennisGame {
+class TennisGame {
     var player1Score = 0
     var player2Score = 0
     
+    var player1: Player
+    var player2: Player
+    
+    init(player1: Player,
+         player2: Player) {
+        self.player1 = player1
+        self.player2 = player2
+    }
+    
     func getScore() -> String {
-        if player1Score == 0 && player2Score == 0 {
+        if player1.score == 0 && player2.score == 0 {
              return "Love Love"
-        } else if player1Score == 1 && player2Score == 0 {
+        } else if player1.score == 1 && player2.score == 0 {
             return "Fifteen Love"
-        } else if player1Score == 2 && player2Score == 0 {
+        } else if player1.score == 2 && player2.score == 0 {
             return "Thirty Love"
         } 
        return ""
-    }
-    
-    mutating func playerOneServedAndScored() {
-        player1Score += 1
-    }
-    
-    mutating func playerTwoServedAndScored() {
-        player2Score += 1
     }
 }
