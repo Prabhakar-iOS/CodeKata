@@ -19,7 +19,8 @@ class TennisGameTests: XCTestCase {
         super.setUp()
         player1 = Player(name: "Player one", score: 0)
         player2 = Player(name: "Player two", score: 0)
-        subject = TennisGame(player1: player1, player2: player2)
+        let umpire = Umpire()
+        subject = TennisGame(player1: player1, player2: player2, umpire: umpire)
     }
     
     func testPointsShouldBeLoveLoveWhenStartOfTheGame() {
@@ -40,20 +41,39 @@ class TennisGameTests: XCTestCase {
         XCTAssertEqual(actualScore, "Thirty Love")
     }
     
-    func testPointShouldBeFortyLoveWhenPlayer1ScoredThirdTimeContinuosly() {
+    func testPointShouldBeFortyThirtyWhenPlayer1ScoredThirdTimeContinuosly() {
+        player1.serveAndWin()
+        player1.serveAndWin()
+        player1.serveAndWin()
+        player2.serveAndWin()
+        player2.serveAndWin()
+        
         let actualScore = subject.getScore()
-        XCTAssertEqual(actualScore, "Forty Love")
-    }
-    
-    func testPointShoudBeAdvantageWhenBothPlayersScoreLeastThreeTimesAndPlayers1HasPointMoreThanPlayer2() {
-        
-    }
-    
-    func testPointsShouldBeDeuceWhenBothPlayersScoresLeastThreeTimesAndPlayersPointsAreEqual() {
-        
+        XCTAssertEqual(actualScore, "Forty Thirty")
     }
     
     func testGameShouldBeWonByPlayer1WhenPlayer1ScoredFourTotalWithTwoPointsMoreThanPlayer2() {
+        player1.serveAndWin()
+        player1.serveAndWin()
+        player1.serveAndWin()
+        player1.serveAndWin()
+        player2.serveAndWin()
+        
+        let acutalScore = subject.getScore()
+        XCTAssertEqual(acutalScore, "Player one won")
+    }
+    
+    func testPointShoudBeAdvantageWhenBothPlayersScoreLeastThreeTimesAndPlayers1HasPointMoreThanPlayer2() {
+        player1.serveAndWin()
+        player1.serveAndWin()
+        player1.serveAndWin()
+        player2.serveAndWin()
+        
+        let actualScore = subject.getScore()
+        XCTAssertEqual(actualScore, "")
+    }
+    
+    func testPointsShouldBeDeuceWhenBothPlayersScoresLeastThreeTimesAndPlayersPointsAreEqual() {
         
     }
     

@@ -12,7 +12,7 @@ class Player {
     let name: String
     public private(set) var score: Int
     
-    private let pointsTextList = ["Love", "Fifteen", "Thirty", "Fifteen"]
+    private let pointsTextsPerScore = [0: "Love", 1: "Fifteen", 2: "Thirty", 3: "Forty"]
     
     init(name: String,
          score: Int) {
@@ -25,6 +25,10 @@ class Player {
     }
     
     func getPointText() -> String {
-        return pointsTextList[score]
+        if let pointsText = pointsTextsPerScore[score] {
+            return pointsText
+        } else {
+            return ""
+        }
     }
 }
