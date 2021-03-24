@@ -6,25 +6,35 @@
 //  Copyright © 2021 Prabhakar. All rights reserved.
 //
 
-import Foundation
 import XCTest
+@testable import CodeKata
 
-class TennisGameTests: XCTest {
+class TennisGameTests: XCTestCase {
+    var subject: TennisGame!
+    
+    override func setUp() {
+        super.setUp()
+        subject = TennisGame()
+    }
     
     func testPointsShouldBeLoveLoveWhenStartOfTheGame() {
-        
+        let actualScore = subject.getScore()
+        XCTAssertEqual(actualScore, "Love Love")
     }
     
     func testPointShouldBeFifteenLoveWhenPlayer1ScoredFirst() {
-        
+        let actualScore = subject.getScore()
+        XCTAssertEqual(actualScore, "Fifteen Love")
     }
     
     func testPointShouldBeThirtyLoveWhenPlayer1ScoredSecondTime() {
-        
+        let actualScore = subject.getScore()
+        XCTAssertEqual(actualScore, "Thirty Love")
     }
     
     func testPointShouldBeFortyLoveWhenPlayer1ScoredThirdTimeContinuosly() {
-        
+        let actualScore = subject.getScore()
+        XCTAssertEqual(actualScore, "Forty Love")
     }
     
     func testPointShoudBeAdvantageWhenBothPlayersScoreLeastThreeTimesAndPlayers1HasPointMoreThanPlayer2() {
