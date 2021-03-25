@@ -11,14 +11,17 @@
 		8E51F372260B6DF2002AB790 /* Umpire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E51F371260B6DF2002AB790 /* Umpire.swift */; };
 		8ED575E2260B4A9F00E126E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED575E1260B4A9F00E126E4 /* AppDelegate.swift */; };
 		8ED575E4260B4A9F00E126E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED575E3260B4A9F00E126E4 /* SceneDelegate.swift */; };
-		8ED575E6260B4A9F00E126E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED575E5260B4A9F00E126E4 /* ViewController.swift */; };
 		8ED575E9260B4A9F00E126E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED575E7260B4A9F00E126E4 /* Main.storyboard */; };
 		8ED575EB260B4AA300E126E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED575EA260B4AA300E126E4 /* Assets.xcassets */; };
 		8ED575EE260B4AA300E126E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED575EC260B4AA300E126E4 /* LaunchScreen.storyboard */; };
 		8ED575F9260B4AA300E126E4 /* CodeKataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED575F8260B4AA300E126E4 /* CodeKataTests.swift */; };
 		8ED57604260B4AA300E126E4 /* CodeKataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED57603260B4AA300E126E4 /* CodeKataUITests.swift */; };
-		8ED57618260B4DF000E126E4 /* TennisGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED57617260B4DF000E126E4 /* TennisGameTests.swift */; };
-		8ED5761A260B522200E126E4 /* TennisGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED57619260B522200E126E4 /* TennisGame.swift */; };
+		8ED57618260B4DF000E126E4 /* TennisGameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED57617260B4DF000E126E4 /* TennisGameViewModelTests.swift */; };
+		8ED5761A260B522200E126E4 /* TennisGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED57619260B522200E126E4 /* TennisGameViewModel.swift */; };
+		8EEAF3E1260C70D3008BEC7F /* TennisGameViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEAF3E0260C70D3008BEC7F /* TennisGameViewControllerFactory.swift */; };
+		8EEAF3E3260C776C008BEC7F /* TennisGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEAF3E2260C776C008BEC7F /* TennisGameViewController.swift */; };
+		8EF73DDF260C9B7900812DAD /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF73DDE260C9B7900812DAD /* PlayerTests.swift */; };
+		8EF73DE1260C9D2D00812DAD /* UmpireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF73DE0260C9D2D00812DAD /* UmpireTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +47,6 @@
 		8ED575DE260B4A9F00E126E4 /* CodeKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED575E1260B4A9F00E126E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		8ED575E3260B4A9F00E126E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8ED575E5260B4A9F00E126E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8ED575E8260B4A9F00E126E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8ED575EA260B4AA300E126E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ED575ED260B4AA300E126E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,8 +57,12 @@
 		8ED575FF260B4AA300E126E4 /* CodeKataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeKataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED57603260B4AA300E126E4 /* CodeKataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeKataUITests.swift; sourceTree = "<group>"; };
 		8ED57605260B4AA300E126E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8ED57617260B4DF000E126E4 /* TennisGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisGameTests.swift; sourceTree = "<group>"; };
-		8ED57619260B522200E126E4 /* TennisGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisGame.swift; sourceTree = "<group>"; };
+		8ED57617260B4DF000E126E4 /* TennisGameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisGameViewModelTests.swift; sourceTree = "<group>"; };
+		8ED57619260B522200E126E4 /* TennisGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisGameViewModel.swift; sourceTree = "<group>"; };
+		8EEAF3E0260C70D3008BEC7F /* TennisGameViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisGameViewControllerFactory.swift; sourceTree = "<group>"; };
+		8EEAF3E2260C776C008BEC7F /* TennisGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisGameViewController.swift; sourceTree = "<group>"; };
+		8EF73DDE260C9B7900812DAD /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
+		8EF73DE0260C9D2D00812DAD /* UmpireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmpireTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +115,9 @@
 			children = (
 				8ED57614260B4D8500E126E4 /* Application */,
 				8ED57611260B4D3200E126E4 /* Model */,
-				8ED57612260B4D4800E126E4 /* ViewModel */,
 				8ED57613260B4D5300E126E4 /* View */,
-				8ED575E5260B4A9F00E126E4 /* ViewController.swift */,
+				8ED57612260B4D4800E126E4 /* ViewModel */,
+				8EF73DE2260CA0E400812DAD /* Factories */,
 				8ED575E7260B4A9F00E126E4 /* Main.storyboard */,
 				8ED575EA260B4AA300E126E4 /* Assets.xcassets */,
 				8ED575EC260B4AA300E126E4 /* LaunchScreen.storyboard */,
@@ -125,7 +131,9 @@
 			children = (
 				8ED575F8260B4AA300E126E4 /* CodeKataTests.swift */,
 				8ED575FA260B4AA300E126E4 /* Info.plist */,
-				8ED57617260B4DF000E126E4 /* TennisGameTests.swift */,
+				8ED57617260B4DF000E126E4 /* TennisGameViewModelTests.swift */,
+				8EF73DDE260C9B7900812DAD /* PlayerTests.swift */,
+				8EF73DE0260C9D2D00812DAD /* UmpireTests.swift */,
 			);
 			path = CodeKataTests;
 			sourceTree = "<group>";
@@ -142,6 +150,7 @@
 		8ED57611260B4D3200E126E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E51F371260B6DF2002AB790 /* Umpire.swift */,
 				8E51F36F260B5656002AB790 /* Player.swift */,
 			);
 			path = Model;
@@ -150,8 +159,7 @@
 		8ED57612260B4D4800E126E4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8ED57619260B522200E126E4 /* TennisGame.swift */,
-				8E51F371260B6DF2002AB790 /* Umpire.swift */,
+				8ED57619260B522200E126E4 /* TennisGameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 		8ED57613260B4D5300E126E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8EEAF3E2260C776C008BEC7F /* TennisGameViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +179,14 @@
 				8ED575E1260B4A9F00E126E4 /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		8EF73DE2260CA0E400812DAD /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				8EEAF3E0260C70D3008BEC7F /* TennisGameViewControllerFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,9 +321,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E51F370260B5656002AB790 /* Player.swift in Sources */,
-				8ED575E6260B4A9F00E126E4 /* ViewController.swift in Sources */,
+				8EEAF3E1260C70D3008BEC7F /* TennisGameViewControllerFactory.swift in Sources */,
+				8EEAF3E3260C776C008BEC7F /* TennisGameViewController.swift in Sources */,
 				8ED575E2260B4A9F00E126E4 /* AppDelegate.swift in Sources */,
-				8ED5761A260B522200E126E4 /* TennisGame.swift in Sources */,
+				8ED5761A260B522200E126E4 /* TennisGameViewModel.swift in Sources */,
 				8ED575E4260B4A9F00E126E4 /* SceneDelegate.swift in Sources */,
 				8E51F372260B6DF2002AB790 /* Umpire.swift in Sources */,
 			);
@@ -316,7 +334,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ED57618260B4DF000E126E4 /* TennisGameTests.swift in Sources */,
+				8ED57618260B4DF000E126E4 /* TennisGameViewModelTests.swift in Sources */,
+				8EF73DE1260C9D2D00812DAD /* UmpireTests.swift in Sources */,
+				8EF73DDF260C9B7900812DAD /* PlayerTests.swift in Sources */,
 				8ED575F9260B4AA300E126E4 /* CodeKataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

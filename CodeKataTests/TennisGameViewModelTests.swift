@@ -1,5 +1,5 @@
 //
-//  TennisGameTests.swift
+//  TennisGameViewModelTests.swift
 //  CodeKataTests
 //
 //  Created by Prabhakar G on 24/03/21.
@@ -9,8 +9,8 @@
 import XCTest
 @testable import CodeKata
 
-class TennisGameTests: XCTestCase {
-    var subject: TennisGame!
+class TennisGameViewModelTests: XCTestCase {
+    var subject: TennisGameViewable!
     
     var player1: Player!
     var player2: Player!
@@ -20,69 +20,69 @@ class TennisGameTests: XCTestCase {
         player1 = Player(name: "Player one", score: 0)
         player2 = Player(name: "Player two", score: 0)
         let umpire = Umpire()
-        subject = TennisGame(player1: player1, player2: player2, umpire: umpire)
+        subject = TennisGameViewModel(player1: player1, player2: player2, umpire: umpire)
     }
     
     func testPointsShouldBeLoveLoveWhenStartOfTheGame() {
         let actualScore = subject.getScore()
-        XCTAssertEqual(actualScore, "Love Love")
+        XCTAssertEqual(actualScore, "Player one score: Love\nPlayer two score: Love")
     }
     
     func testPointShouldBeFifteenLoveWhenPlayer1ScoredFirst() {
-        player1.serveAndWin()
+        player1.winsTheBall()
         let actualScore = subject.getScore()
-        XCTAssertEqual(actualScore, "Fifteen Love")
+        XCTAssertEqual(actualScore, "Player one score: Fifteen\nPlayer two score: Love")
     }
     
     func testPointShouldBeThirtyLoveWhenPlayer1ScoredSecondTime() {
-        player1.serveAndWin()
-        player1.serveAndWin()
+        player1.winsTheBall()
+        player1.winsTheBall()
         let actualScore = subject.getScore()
-        XCTAssertEqual(actualScore, "Thirty Love")
+        XCTAssertEqual(actualScore, "Player one score: Thirty\nPlayer two score: Love")
     }
     
     func testPointShouldBeFortyThirtyWhenPlayer1ScoredThirdTimeContinuosly() {
-        player1.serveAndWin()
-        player1.serveAndWin()
-        player1.serveAndWin()
-        player2.serveAndWin()
-        player2.serveAndWin()
+        player1.winsTheBall()
+        player1.winsTheBall()
+        player1.winsTheBall()
+        player2.winsTheBall()
+        player2.winsTheBall()
         
         let actualScore = subject.getScore()
-        XCTAssertEqual(actualScore, "Forty Thirty")
+        XCTAssertEqual(actualScore, "Player one score: Forty\nPlayer two score: Thirty")
     }
     
     func testGameShouldBeWonByPlayer1WhenPlayer1ScoredFourTotalWithTwoPointsMoreThanPlayer2() {
-        player1.serveAndWin()
-        player1.serveAndWin()
-        player1.serveAndWin()
-        player1.serveAndWin()
-        player2.serveAndWin()
+        player1.winsTheBall()
+        player1.winsTheBall()
+        player1.winsTheBall()
+        player1.winsTheBall()
+        player2.winsTheBall()
         
         let acutalScore = subject.getScore()
         XCTAssertEqual(acutalScore, "Player one won")
     }
     
     func testPointShoudBeAdvantageWhenBothPlayersScoreLeastThreeTimesAndPlayers1HasPointMoreThanPlayer2() {
-        player1.serveAndWin()
-        player1.serveAndWin()
-        player1.serveAndWin()
-        player1.serveAndWin()
-        player2.serveAndWin()
-        player2.serveAndWin()
-        player2.serveAndWin()
+        player1.winsTheBall()
+        player1.winsTheBall()
+        player1.winsTheBall()
+        player1.winsTheBall()
+        player2.winsTheBall()
+        player2.winsTheBall()
+        player2.winsTheBall()
         
         let actualScore = subject.getScore()
         XCTAssertEqual(actualScore, "Player one has advantage")
     }
     
     func testPointsShouldBeDeuceWhenBothPlayersScoresLeastThreeTimesAndPlayersPointsAreEqual() {
-        player1.serveAndWin()
-        player1.serveAndWin()
-        player1.serveAndWin()
-        player2.serveAndWin()
-        player2.serveAndWin()
-        player2.serveAndWin()
+        player1.winsTheBall()
+        player1.winsTheBall()
+        player1.winsTheBall()
+        player2.winsTheBall()
+        player2.winsTheBall()
+        player2.winsTheBall()
         let actualScore = subject.getScore()
         XCTAssertEqual(actualScore, "Game is deuce")
     }

@@ -20,7 +20,7 @@ class Player {
         self.score = score
     }
     
-    func serveAndWin() {
+    func winsTheBall() {
         score += 1
     }
     
@@ -30,5 +30,9 @@ class Player {
         } else {
             return ""
         }
+    }
+    
+    func reset() {
+        score = 0
     }
 }

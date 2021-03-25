@@ -11,13 +11,14 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let tennisGameViewControllerFactory = TennisGameViewControllerFactory()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        startRootViewController(windowScene)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -48,6 +49,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    private func startRootViewController(_ windowScene: UIWindowScene) {
+        let vc = tennisGameViewControllerFactory.makeTennisGameViewController()
+        
+        let navigationController = UINavigationController(rootViewController: vc)
+        self.window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+    }
 }
-
